@@ -729,43 +729,62 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .wp-block-query .wp-block-post-template .post-meta-row {
   order: 4 !important;
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
+  gap: 6px !important;
   padding: 10px 14px !important;
   margin: 0 !important;
-  min-height: 0 !important;
   border-top: 1px solid #f3f4f6 !important;
+}
+/* Hide the decorative spacer between author and date */
+.wp-block-query .wp-block-post-template .post-meta-row .wp-block-spacer {
+  display: none !important;
+}
+/* Wrapper group around author — don't let it constrain layout */
+.wp-block-query .wp-block-post-template .post-meta-row > .wp-block-group {
+  min-width: 0 !important;
+  flex-shrink: 1 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author {
   display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center !important;
-  gap: 7px !important;
+  gap: 8px !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author__byline {
   display: none !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author__avatar {
-  margin-right: 0 !important;
   flex-shrink: 0 !important;
+  margin: 0 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author__avatar img {
-  width: 26px !important;
-  height: 26px !important;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50% !important;
+  display: block !important;
+  border: 2px solid #e5e7eb !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author__content {
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
+  min-width: 0 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-author__name {
   font-family: 'Poppins', sans-serif !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
   color: #374151 !important;
   margin: 0 !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-date {
-  font-size: 12px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 11px !important;
   color: #9ca3af !important;
   font-weight: 400 !important;
   font-style: normal !important;
@@ -774,9 +793,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
   flex-shrink: 0 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-date time {
-  font-size: 12px !important;
+  font-size: 11px !important;
   color: #9ca3af !important;
-  font-weight: 400 !important;
   white-space: nowrap !important;
   display: inline !important;
 }
