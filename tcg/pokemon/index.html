@@ -577,11 +577,21 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-180x180.webp">
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-270x270.webp">
 <style id="pd-blog-grid">
-/* ===== PlayDreamz Blog – TCGPlayer Style ===== */
+/* ===== PlayDreamz Blog – TCGPlayer Style v3 ===== */
 
 /* Post area: white background */
 .post-page-area {
   background: #fff !important;
+}
+
+/* ── Full-width layout: hide sidebar ── */
+.post-page-area > .wp-block-columns > .wp-block-column:last-child {
+  display: none !important;
+}
+.post-page-area > .wp-block-columns > .wp-block-column:first-child {
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+  padding-right: 0 !important;
 }
 
 /* 4-column grid */
@@ -593,7 +603,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
   margin: 0 !important;
   list-style: none !important;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .wp-block-query .wp-block-post-template { grid-template-columns: repeat(3, 1fr) !important; }
 }
 @media (max-width: 768px) {
@@ -625,19 +635,26 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
   overflow: hidden !important;
   flex-shrink: 0 !important;
   margin: 0 !important;
+  padding: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
 }
 /* Reset alignwide negative margins */
-.wp-block-query .wp-block-post-template figure.alignwide,
 .wp-block-query .wp-block-post-template .wp-block-post-featured-image.alignwide {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
 }
+/* Fix picture/a/img chain to fill the 16:9 container */
 .wp-block-query .wp-block-post-template .wp-block-post-featured-image a {
   display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.wp-block-query .wp-block-post-template .wp-block-post-featured-image picture {
+  display: block !important;
+  width: 100% !important;
   height: 100% !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-featured-image img {
@@ -754,10 +771,16 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
   color: #9ca3af !important;
   font-weight: 400 !important;
   font-style: normal !important;
+  white-space: nowrap !important;
+  writing-mode: horizontal-tb !important;
+  flex-shrink: 0 !important;
 }
 .wp-block-query .wp-block-post-template .wp-block-post-date time {
+  font-size: 12px !important;
   color: #9ca3af !important;
   font-weight: 400 !important;
+  white-space: nowrap !important;
+  display: inline !important;
 }
 </style></head>
 
