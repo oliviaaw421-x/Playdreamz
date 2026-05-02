@@ -557,19 +557,26 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
     font-weight: 700 !important;
     font-style: normal !important;
 }
-/* Hover: navy underline only */
+/* Remove background on hover, no text-decoration */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content {
-    position: relative !important;
     text-decoration: none !important;
     background: none !important;
-    padding-bottom: 2px !important;
 }
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover,
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:focus {
     background: none !important;
     text-decoration: none !important;
 }
+/* Remove old ::after from <a> */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content::after {
+    content: none !important;
+}
+/* Underline on label span — matches text width exactly */
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content .wp-block-navigation-item__label {
+    position: relative !important;
+    display: inline-block !important;
+}
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content .wp-block-navigation-item__label::after {
     content: '' !important;
     position: absolute !important;
     bottom: -2px !important;
@@ -579,18 +586,20 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
     background: #1D164A !important;
     transform: scaleX(0) !important;
     transition: transform 0.2s ease !important;
+    display: block !important;
 }
-.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover::after {
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover .wp-block-navigation-item__label::after {
     transform: scaleX(1) !important;
 }
-/* Desktop: hide WP dropdown, JS controls it */
+/* Desktop: dropdown */
 @media (min-width: 600px) {
     .menu-header .wp-block-navigation-item.has-child > .wp-block-navigation__submenu-container {
         position: fixed !important;
+        display: inline-flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
         height: auto !important;
         overflow: visible !important;
-        width: fit-content !important;
-        min-width: 0 !important;
         opacity: 0 !important;
         visibility: hidden !important;
         transform: translateY(-8px) !important;
@@ -602,8 +611,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         box-shadow: 0 8px 32px rgba(29,22,74,0.14) !important;
         padding: 8px 0 !important;
         z-index: 9999 !important;
-        display: flex !important;
-        flex-direction: column !important;
+    }
+    .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item {
+        display: block !important;
     }
     .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
         display: block !important;
@@ -613,18 +623,14 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         font-size: 16px !important;
         text-decoration: none !important;
         background: none !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
         border-radius: 0 !important;
         white-space: nowrap !important;
     }
     .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
-        background: rgba(29,22,74,0.06) !important;
+        background: none !important;
         text-decoration: none !important;
-    }
-    /* Underline on dropdown items too */
-    .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content::after {
-        bottom: 6px !important;
-        left: 24px !important;
-        right: 24px !important;
     }
 }
 </style>
