@@ -64,9 +64,11 @@
     var resultsEl = document.getElementById('results');
     var pf = null;
 
-    // Pre-load pagefind immediately so it's ready when needed
+    // Pre-load pagefind and trigger init via options() — same pattern as working overlay
     import('/pagefind/pagefind.js').then(function(m) {
       pf = m;
+      return pf.options({excerptLength: 30});
+    }).then(function() {
       if (initialQ) {
         input.value = initialQ;
         runSearch(initialQ);
