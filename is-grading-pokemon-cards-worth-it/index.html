@@ -604,13 +604,24 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-180x180.webp">
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-270x270.webp">
 <style id="pd-header">
-/* Nav: uniform font weight — normalise inline 700 vs <strong> rendering */
+/* Nav font: smaller than default 20px, consistent weight */
 .menu-header .wp-block-navigation-item,
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content,
 .menu-header .wp-block-navigation-item .wp-block-navigation-item__label,
 .menu-header .wp-block-navigation-item strong {
-    font-weight: 700 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
     font-style: normal !important;
+}
+/* Remove ugly dashed underline on hover (from theme style.css) */
+.menu-header .wp-block-navigation .wp-block-navigation-item a:hover,
+.menu-header .wp-block-navigation .wp-block-navigation-item a:focus {
+    text-decoration: none !important;
+}
+/* Nav hover: clean navy tint pill */
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
+    background: rgba(29,22,74,0.08) !important;
+    border-radius: 5px !important;
 }
 /* Dropdown: white card, rounded, shadow */
 .menu-header .wp-block-navigation__submenu-container {
@@ -630,7 +641,6 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 }
 .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
     background: rgba(29,22,74,0.07) !important;
-    text-decoration: none !important;
 }
 </style>
 </head>
