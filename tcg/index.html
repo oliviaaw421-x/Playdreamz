@@ -842,6 +842,31 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     text-decoration: none !important;
 }
 </style>
+<script id="pd-nav-pos">
+(function(){
+    function init(){
+        var li=document.querySelector('.menu-header .wp-block-navigation-item.has-child');
+        var sub=li&&li.querySelector('.wp-block-navigation__submenu-container');
+        if(!li||!sub)return;
+        function fix(){
+            var r=li.getBoundingClientRect();
+            sub.style.setProperty('position','fixed','important');
+            sub.style.setProperty('left',Math.round(r.left)+'px','important');
+            sub.style.setProperty('top',Math.round(r.bottom)+4+'px','important');
+            sub.style.setProperty('right','auto','important');
+            sub.style.setProperty('bottom','auto','important');
+            sub.style.setProperty('transform','none','important');
+            sub.style.setProperty('margin','0','important');
+        }
+        li.addEventListener('mouseenter',fix);
+        li.addEventListener('focusin',fix);
+        var btn=li.querySelector('.wp-block-navigation-submenu__toggle');
+        if(btn)btn.addEventListener('click',fix);
+        window.addEventListener('resize',fix);
+    }
+    document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>
 </head>
 
 <body class="archive category category-tcg category-6 wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">
