@@ -6,6 +6,7 @@
   <title>Search — PlayDreamz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:#f8f8f8;color:#1D164A;min-height:100vh}
@@ -14,23 +15,25 @@
     header a.back{color:rgba(255,255,255,0.7);font-size:0.9rem;text-decoration:none}
     header a.back:hover{color:#fff}
     .search-wrap{background:#1D164A;padding:0 32px 32px}
-    .search-bar{display:flex;gap:0;max-width:720px}
-    .search-bar input{flex:1;padding:14px 20px;border:none;border-radius:10px 0 0 10px;font-family:'Poppins',sans-serif;font-size:1rem;outline:none;color:#1D164A}
-    .search-bar button{padding:14px 22px;background:#fff;border:none;border-radius:0 10px 10px 0;cursor:pointer;border-left:2px solid #eee}
-    .search-bar button svg{display:block}
     .content{max-width:760px;margin:40px auto;padding:0 24px 60px}
-    #search-heading{font-family:'Teko',sans-serif;font-size:1.8rem;font-weight:400;margin-bottom:28px;color:#1D164A}
-    .result{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(29,22,74,0.07);transition:box-shadow 0.2s}
-    .result:hover{box-shadow:0 4px 16px rgba(29,22,74,0.13)}
-    .result h2{font-family:'Teko',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:6px}
-    .result h2 a{color:#1D164A;text-decoration:none}
-    .result h2 a:hover{text-decoration:underline}
-    .result p{font-size:0.88rem;color:#555;line-height:1.6}
-    .result p mark{background:rgba(29,22,74,0.12);color:#1D164A;border-radius:3px;padding:0 2px}
-    .result .url{font-size:0.78rem;color:#888;margin-top:8px}
-    #status{color:#888;font-size:0.95rem;margin-bottom:20px}
-    #no-results{text-align:center;padding:60px 0;color:#888}
-    #no-results h2{font-family:'Teko',sans-serif;font-size:1.5rem;font-weight:400;margin-bottom:8px;color:#1D164A}
+
+    /* PagefindUI overrides */
+    #pd-search-page{--pagefind-ui-scale:1;--pagefind-ui-primary:#1D164A;--pagefind-ui-text:#1D164A;--pagefind-ui-background:#fff;--pagefind-ui-border:#e0e0e0;--pagefind-ui-tag:#f0f0f0;font-family:'Poppins',sans-serif}
+    #pd-search-page .pagefind-ui__search-input{font-family:'Poppins',sans-serif;font-size:1rem;border-radius:10px 0 0 10px;border:none;padding:14px 20px;color:#1D164A}
+    #pd-search-page .pagefind-ui__search-clear{background:#fff;border-radius:0 10px 10px 0;border:none;border-left:2px solid #eee}
+    #pd-search-page .pagefind-ui__form{max-width:720px}
+    #pd-search-page .pagefind-ui__result{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(29,22,74,0.07);border:none}
+    #pd-search-page .pagefind-ui__result:hover{box-shadow:0 4px 16px rgba(29,22,74,0.13)}
+    #pd-search-page .pagefind-ui__result-title{font-family:'Teko',sans-serif;font-size:1.3rem;font-weight:700}
+    #pd-search-page .pagefind-ui__result-link{color:#1D164A;text-decoration:none}
+    #pd-search-page .pagefind-ui__result-link:hover{text-decoration:underline}
+    #pd-search-page .pagefind-ui__result-excerpt{font-size:0.88rem;color:#555;line-height:1.6}
+    #pd-search-page .pagefind-ui__result-excerpt mark{background:rgba(29,22,74,0.12);color:#1D164A;border-radius:3px;padding:0 2px}
+    #pd-search-page .pagefind-ui__message{color:#888;font-size:0.95rem;font-family:'Poppins',sans-serif}
+    #pd-search-page .pagefind-ui__results-area{margin-top:32px}
+    #pd-search-page .pagefind-ui__button{background:#1D164A;color:#fff;border-radius:8px;font-family:'Poppins',sans-serif;border:none}
+    #pd-search-page .pagefind-ui__button:hover{background:#2d2570}
+    #pd-search-page .pagefind-ui__result-image{display:none}
   </style>
 </head>
 <body>
@@ -39,71 +42,31 @@
     <a href="/" class="back">← Back to Home</a>
   </header>
   <div class="search-wrap">
-    <form class="search-bar" id="search-form">
-      <input type="search" id="search-input" placeholder="Search PlayDreamz..." autocomplete="off">
-      <button type="submit" aria-label="Search">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D164A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </button>
-    </form>
+    <div id="pd-search-page"></div>
   </div>
-  <div class="content">
-    <p id="search-heading"></p>
-    <p id="status"></p>
-    <div id="results"></div>
-  </div>
-
-  <script type="module">
-    const params = new URLSearchParams(window.location.search);
-    const initialQ = params.get('q') || '';
-    const input = document.getElementById('search-input');
-    const form = document.getElementById('search-form');
-    const heading = document.getElementById('search-heading');
-    const status = document.getElementById('status');
-    const resultsEl = document.getElementById('results');
-
-    if (initialQ) {
-      input.value = initialQ;
-      runSearch(initialQ);
-    }
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const q = input.value.trim();
-      if (!q) return;
-      history.pushState({}, '', '/search/?q=' + encodeURIComponent(q));
-      runSearch(q);
-    });
-
-    async function runSearch(q) {
-      heading.textContent = 'Search results for "' + q + '"';
-      status.textContent = 'Searching...';
-      resultsEl.innerHTML = '';
-      try {
-        const pagefind = await import('/pagefind/pagefind.js');
-        const search = await pagefind.search(q);
-        status.textContent = search.results.length + ' result' + (search.results.length !== 1 ? 's' : '') + ' found';
-        if (search.results.length === 0) {
-          resultsEl.innerHTML = '<div id="no-results"><h2>No results found</h2><p>Try different keywords.</p></div>';
-          return;
-        }
-        for (const r of search.results) {
-          const data = await r.data();
-          const card = document.createElement('div');
-          card.className = 'result';
-          card.innerHTML = `
-            <h2><a href="${data.url}">${data.meta.title || 'PlayDreamz Page'}</a></h2>
-            <p>${data.excerpt}</p>
-            <div class="url">playdreamz.com${data.url}</div>
-          `;
-          resultsEl.appendChild(card);
-        }
-      } catch(e) {
-        status.textContent = '';
-        resultsEl.innerHTML = '<p style="color:#888">Search index not ready yet. Please try again shortly.</p>';
+  <script>
+    var q = new URLSearchParams(window.location.search).get('q') || '';
+    var s = document.createElement('script');
+    s.src = '/pagefind/pagefind-ui.js';
+    s.onload = function() {
+      new PagefindUI({
+        element: '#pd-search-page',
+        showImages: false,
+        excerptLength: 30,
+        resetStyles: false,
+        bundlePath: '/pagefind/'
+      });
+      if (q) {
+        setTimeout(function() {
+          var inp = document.querySelector('#pd-search-page input');
+          if (inp) {
+            inp.value = q;
+            inp.dispatchEvent(new Event('input', {bubbles: true}));
+          }
+        }, 80);
       }
-    }
+    };
+    document.head.appendChild(s);
   </script>
 </body>
 </html>
