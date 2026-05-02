@@ -38,3 +38,96 @@ input[type="submit"]:hover {
     border-top-color: var(--wp--preset--color--primary);
     border-left-color: var(--wp--preset--color--primary);
 }
+
+/* ===== PlayDreamz Header ===== */
+
+/* Subtle depth shadow under header bar */
+.menu-header .wp-block-columns {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35) !important;
+    padding-left: var(--wp--preset--spacing--50) !important;
+    padding-right: var(--wp--preset--spacing--50) !important;
+}
+
+/* Nav links — padding, hover pill, smooth transition */
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content {
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    letter-spacing: 0.4px !important;
+    transition: background 0.18s ease, color 0.18s ease !important;
+    text-decoration: none !important;
+}
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+
+/* Active / current page: white underline accent */
+.menu-header .current-menu-item > a.wp-block-navigation-item__content,
+.wp-block-navigation ul li.current-menu-item > a {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 6px 6px 0 0 !important;
+    padding-bottom: 6px !important;
+}
+
+/* Dropdown submenu */
+.menu-header .wp-block-navigation__submenu-container {
+    background: #0d1f3c !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45) !important;
+    padding: 6px !important;
+    min-width: 168px !important;
+}
+.menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
+    border-radius: 6px !important;
+    border-bottom: none !important;
+}
+
+/* Submenu chevron: white */
+.menu-header .wp-block-navigation__submenu-icon path {
+    stroke: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Search icon: fix black→white */
+.menu-header .wp-block-search__button {
+    color: rgba(255, 255, 255, 0.85) !important;
+    background: transparent !important;
+    border: none !important;
+    width: 38px !important;
+    height: 38px !important;
+    padding: 7px !important;
+    border-radius: 50% !important;
+    transition: background 0.18s ease, color 0.18s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.menu-header .wp-block-search__button:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+.menu-header .wp-block-search__button svg path {
+    fill: currentColor !important;
+}
+
+/* Search input (when expanded) */
+.menu-header .wp-block-search__input {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    padding: 6px 10px !important;
+}
+.menu-header .wp-block-search__input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Mobile hamburger: white icon */
+.menu-header .wp-block-navigation__responsive-container-open {
+    color: #ffffff !important;
+}
+.menu-header .wp-block-navigation__responsive-container-open svg path {
+    fill: #ffffff !important;
+}
