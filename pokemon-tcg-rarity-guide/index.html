@@ -697,10 +697,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         var overLi = false, overSub = false;
 
         function reposition(){
-            var rl = li.getBoundingClientRect();
-            var rb = link.getBoundingClientRect();
-            sub.style.setProperty('left', Math.round(rl.left) + 'px', 'important');
-            sub.style.setProperty('top', Math.round(rb.bottom) + 'px', 'important');
+            var r = link.getBoundingClientRect();
+            sub.style.setProperty('left', Math.round(r.left) + 'px', 'important');
+            sub.style.setProperty('top', Math.round(r.bottom) + 'px', 'important');
         }
         function show(){
             reposition();
