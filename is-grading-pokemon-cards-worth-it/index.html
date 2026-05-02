@@ -675,7 +675,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         align-items: center !important;
         justify-content: flex-start !important;
         color: #1D164A !important;
-        padding: 10px 24px 10px 0 !important;
+        padding: 10px 20px 10px 14px !important;
         font-weight: 700 !important;
         font-size: 20px !important;
         text-decoration: none !important;
@@ -708,7 +708,12 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
         function reposition(){
             var r = link.getBoundingClientRect();
-            sub.style.setProperty('left', Math.round(r.left) + 'px', 'important');
+            var subW = sub.offsetWidth;
+            var left = Math.round(r.left);
+            if (left + subW > window.innerWidth - 8) {
+                left = Math.round(window.innerWidth - subW - 8);
+            }
+            sub.style.setProperty('left', left + 'px', 'important');
             sub.style.setProperty('top', Math.round(r.bottom) + 'px', 'important');
         }
         function show(){
