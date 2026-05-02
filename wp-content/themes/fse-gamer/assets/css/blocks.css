@@ -39,33 +39,41 @@ input[type="submit"]:hover {
     border-left-color: var(--wp--preset--color--primary);
 }
 
-/* ===== PlayDreamz Header ===== */
-/* Header is white bg (#fff) with navy text (#1D164A) */
+/* ===== PlayDreamz Header — Dark Navy + Purple Accent ===== */
 
-/* Sticky header + bottom separator */
+/* Sticky dark header */
 header.wp-block-template-part {
     position: sticky !important;
     top: 0 !important;
     z-index: 999 !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid rgba(29, 22, 74, 0.1) !important;
-    box-shadow: 0 2px 16px rgba(29, 22, 74, 0.08) !important;
+    background: #1D164A !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Header bar: remove rounded corners for sticky, add horizontal padding */
+/* Header bar: remove rounded corners, full-width, horizontal padding */
 .menu-header .wp-block-columns {
+    background: #1D164A !important;
     border-radius: 0 !important;
     padding-left: var(--wp--preset--spacing--50) !important;
     padding-right: var(--wp--preset--spacing--50) !important;
 }
 
-/* Nav links: padding + navy pill on hover */
+/* Logo: invert dark logo to white for dark background */
+.menu-header .wp-block-site-logo img {
+    filter: brightness(0) invert(1) !important;
+    transition: opacity 0.2s ease !important;
+}
+.menu-header .wp-block-site-logo img:hover {
+    opacity: 0.85 !important;
+}
+
+/* Nav links: white text, purple pill on hover */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content {
     font-family: 'Poppins', sans-serif !important;
     font-size: 14px !important;
     font-weight: 600 !important;
     letter-spacing: 0.3px !important;
-    color: #1D164A !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     padding: 8px 16px !important;
     border-radius: 6px !important;
     transition: background 0.18s ease, color 0.18s ease !important;
@@ -73,50 +81,50 @@ header.wp-block-template-part {
 }
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover,
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:focus {
-    background: #1D164A !important;
+    background: #5C47DE !important;
     color: #ffffff !important;
     text-decoration: none !important;
 }
 
-/* Active / current page: filled navy pill */
+/* Active / current page: solid purple pill */
 .menu-header .current-menu-item > a.wp-block-navigation-item__content,
 .wp-block-navigation ul li.current-menu-item > a {
-    background: #1D164A !important;
+    background: #5C47DE !important;
     color: #ffffff !important;
     border-radius: 6px !important;
     border-bottom: none !important;
     padding-bottom: 8px !important;
 }
 
-/* Dropdown submenu: navy bg, rounded, shadow */
+/* Dropdown submenu: darker navy, rounded, strong shadow */
 .menu-header .wp-block-navigation__submenu-container {
-    background: #1D164A !important;
-    border: none !important;
-    border-radius: 8px !important;
-    box-shadow: 0 8px 28px rgba(29, 22, 74, 0.25) !important;
+    background: #120f38 !important;
+    border: 1px solid rgba(92, 71, 222, 0.3) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5) !important;
     padding: 6px !important;
     min-width: 168px !important;
 }
 .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     font-size: 13px !important;
     border-radius: 6px !important;
     border-bottom: none !important;
     background: transparent !important;
 }
 .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: #5C47DE !important;
     color: #ffffff !important;
 }
 
-/* Submenu chevron: navy */
+/* Submenu chevron: white */
 .menu-header .wp-block-navigation__submenu-icon path {
-    stroke: #1D164A !important;
+    stroke: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Search button: navy icon, circle hover */
+/* Search button: white icon, purple circle on hover */
 .menu-header .wp-block-search__button {
-    color: #1D164A !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     background: transparent !important;
     border: none !important;
     width: 38px !important;
@@ -129,7 +137,7 @@ header.wp-block-template-part {
     justify-content: center !important;
 }
 .menu-header .wp-block-search__button:hover {
-    background: #1D164A !important;
+    background: #5C47DE !important;
     color: #ffffff !important;
 }
 .menu-header .wp-block-search__button svg path {
@@ -138,18 +146,21 @@ header.wp-block-template-part {
 
 /* Search input when expanded */
 .menu-header .wp-block-search__input {
-    border: 1px solid rgba(29, 22, 74, 0.3) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 6px !important;
-    color: #1D164A !important;
+    color: #ffffff !important;
     padding: 6px 10px !important;
-    background: #ffffff !important;
     font-size: 14px !important;
 }
+.menu-header .wp-block-search__input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
 
-/* Mobile hamburger: navy icon */
+/* Mobile hamburger: white icon */
 .menu-header .wp-block-navigation__responsive-container-open {
-    color: #1D164A !important;
+    color: #ffffff !important;
 }
 .menu-header .wp-block-navigation__responsive-container-open svg path {
-    fill: #1D164A !important;
+    fill: #ffffff !important;
 }
