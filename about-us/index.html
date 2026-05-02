@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
 <head><meta charset="UTF-8">
 	
@@ -702,12 +702,18 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
     document.readyState==='loading' ? document.addEventListener('DOMContentLoaded',init) : init();
 })();
 </script>
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <style>
 #pd-search-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:999999;align-items:flex-start;justify-content:center;padding-top:72px}
 #pd-search-overlay.open{display:flex}
-#pd-search-modal{background:#fff;border-radius:16px;width:92%;max-width:640px;padding:24px 24px 16px;box-shadow:0 24px 64px rgba(0,0,0,0.25)}
-#pd-search-modal .pagefind-ui__search-input{font-family:inherit}
+#pd-search-modal{background:#fff;border-radius:16px;width:92%;max-width:640px;padding:20px;box-shadow:0 24px 64px rgba(0,0,0,0.25)}
+#pd-si-wrap{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1D164A;padding-bottom:12px;margin-bottom:4px}
+#pd-si-wrap svg{flex-shrink:0;opacity:0.4}
+#pd-si{border:none;outline:none;font-family:'Poppins',sans-serif;font-size:1rem;flex:1;color:#1D164A;background:none}
+#pd-si::placeholder{color:#aaa}
+#pd-sr a{display:block;padding:10px 6px;color:#1D164A;text-decoration:none;font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:500;border-bottom:1px solid #f0f0f0}
+#pd-sr a:last-child{border-bottom:none}
+#pd-sr a:hover{background:rgba(29,22,74,0.05);border-radius:6px}
+#pd-sr-empty{padding:12px 6px;color:#999;font-family:'Poppins',sans-serif;font-size:0.85rem}
 </style>
 </head>
 
@@ -945,47 +951,39 @@ function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="
 const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
 //# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
 </script>
-<div id="pd-search-overlay"><div id="pd-search-modal"><div id="pagefind-search"></div></div></div>
+<div id="pd-search-overlay"><div id="pd-search-modal"><div id="pd-si-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D164A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input id="pd-si" type="search" placeholder="Search PlayDreamz..." autocomplete="off"></div><div id="pd-sr"></div></div></div>
 <script>(function(){
   var btn=document.getElementById("pd-search-btn");
-  if(!btn)return;
   var overlay=document.getElementById("pd-search-overlay");
-  if(!overlay)return;
-  var initialized=false;
+  var si=document.getElementById("pd-si");
+  var sr=document.getElementById("pd-sr");
+  if(!btn||!overlay||!si||!sr)return;
+  var pf=null,timer=null;
   function openOverlay(){
     overlay.classList.add("open");
     document.body.style.overflow="hidden";
-    if(!initialized){
-      initialized=true;
-      var s=document.createElement("script");
-      s.src="/pagefind/pagefind-ui.js";
-      s.onload=function(){
-        new PagefindUI({element:"#pagefind-search",showImages:false,excerptLength:15,resetStyles:false});
-        setTimeout(function(){
-          var si=overlay.querySelector("input");
-          if(si){
-            si.focus();
-            si.addEventListener("keydown",function(e){
-              if(e.key==="Enter"&&si.value.trim()){e.preventDefault();window.location.href="/search/?q="+encodeURIComponent(si.value.trim());}}
-            });
-          }
-        },120);
-      };
-      document.head.appendChild(s);
-    } else {
-      setTimeout(function(){
-        var si=overlay.querySelector("input");
-        if(si){si.focus();si.select();}
-      },50);
-    }
+    si.focus();
+    if(!pf)import('/pagefind/pagefind.js').then(function(m){pf=m;pf.options({excerptLength:0});});
   }
+  function doSearch(q){
+    if(!pf||!q.trim()){sr.innerHTML='';return;}
+    pf.search(q).then(function(res){
+      if(!res.results.length){sr.innerHTML='<div id="pd-sr-empty">No results found</div>';return;}
+      var top=res.results.slice(0,8),done=0,items=new Array(top.length);
+      top.forEach(function(r,i){r.data().then(function(d){
+        items[i]='<a href="'+d.url+'">'+(d.meta.title||'PlayDreamz Page')+'</a>';
+        if(++done===top.length)sr.innerHTML=items.join('');
+      });});
+    });
+  }
+  si.addEventListener("input",function(){clearTimeout(timer);timer=setTimeout(function(){doSearch(si.value);},250);});
+  si.addEventListener("keydown",function(e){
+    if(e.key==="Enter"&&si.value.trim()){e.preventDefault();window.location.href="/search/?q="+encodeURIComponent(si.value.trim());}
+    if(e.key==="Escape"){overlay.classList.remove("open");document.body.style.overflow="";}
+  });
   btn.addEventListener("click",function(e){e.stopPropagation();openOverlay();});
-  overlay.addEventListener("click",function(e){
-    if(e.target===overlay){overlay.classList.remove("open");document.body.style.overflow="";}
-  });
-  document.addEventListener("keydown",function(e){
-    if(e.key==="Escape"&&overlay.classList.contains("open")){overlay.classList.remove("open");document.body.style.overflow="";}
-  });
+  overlay.addEventListener("click",function(e){if(e.target===overlay){overlay.classList.remove("open");document.body.style.overflow="";}});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&overlay.classList.contains("open")){overlay.classList.remove("open");document.body.style.overflow="";}});
 })();</script>
 </body>
 </html><!-- Page cached by LiteSpeed Cache 7.7 on 2026-04-27 10:57:57 -->
