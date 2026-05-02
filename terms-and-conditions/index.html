@@ -550,14 +550,14 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-180x180.webp">
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/01/cropped-play-dreamz-favicon-white-270x270.webp">
 <style id="pd-header">
-/* Uniform nav font weight */
+/* Nav font weight */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content,
 .menu-header .wp-block-navigation-item .wp-block-navigation-item__label,
 .menu-header .wp-block-navigation-item strong {
     font-weight: 700 !important;
     font-style: normal !important;
 }
-/* Remove background on hover, no text-decoration */
+/* No background on hover */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content {
     text-decoration: none !important;
     background: none !important;
@@ -571,7 +571,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content::after {
     content: none !important;
 }
-/* Underline on label span — matches text width exactly */
+/* Hover underline on label span — text width only */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content .wp-block-navigation-item__label {
     position: relative !important;
     display: inline-block !important;
@@ -608,8 +608,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s !important;
         background: #ffffff !important;
         border: none !important;
-        border-top: 3px solid #1D164A !important;
-        border-radius: 0 0 12px 12px !important;
+        border-radius: 8px !important;
         box-shadow: 0 8px 32px rgba(29,22,74,0.14) !important;
         padding: 8px 0 !important;
         z-index: 9999 !important;
@@ -618,21 +617,27 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
         display: block !important;
     }
     .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
-        display: block !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
         color: #1D164A !important;
         padding: 10px 24px !important;
-        font-weight: 600 !important;
-        font-size: 16px !important;
+        font-weight: 700 !important;
+        font-size: 20px !important;
         text-decoration: none !important;
         background: none !important;
-        text-align: left !important;
-        justify-content: flex-start !important;
         border-radius: 0 !important;
         white-space: nowrap !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
         background: none !important;
         text-decoration: none !important;
+    }
+    .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content .wp-block-navigation-item__label {
+        display: inline-block !important;
+        text-align: left !important;
     }
 }
 </style>
