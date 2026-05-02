@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
 <head><meta charset="UTF-8">
 	
@@ -996,7 +996,12 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
         new PagefindUI({element:"#pagefind-search",showImages:false,excerptLength:15,resetStyles:false});
         setTimeout(function(){
           var si=overlay.querySelector("input");
-          if(si)si.focus();
+          if(si){
+            si.focus();
+            si.addEventListener("keydown",function(e){
+              if(e.key==="Enter"&&si.value.trim()){e.preventDefault();window.location.href="/search/?q="+encodeURIComponent(si.value.trim());}}
+            });
+          }
         },120);
       };
       document.head.appendChild(s);
