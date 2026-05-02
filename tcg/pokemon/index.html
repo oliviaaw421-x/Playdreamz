@@ -808,7 +808,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     font-weight: 700 !important;
     font-style: normal !important;
 }
-/* Hover underline: deep navy line below nav item */
+/* Hover: navy underline only, no background */
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content {
     position: relative !important;
     text-decoration: none !important;
@@ -825,14 +825,15 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     transform: scaleX(0) !important;
     transition: transform 0.2s ease !important;
 }
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover,
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:focus {
+    text-decoration: none !important;
+    background: transparent !important;
+}
 .menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover::after {
     transform: scaleX(1) !important;
 }
-.menu-header .wp-block-navigation .wp-block-navigation-item a:hover,
-.menu-header .wp-block-navigation .wp-block-navigation-item a:focus {
-    text-decoration: none !important;
-}
-/* Dropdown: GamesHub-style panel, flush against nav bottom */
+/* Dropdown white card */
 .menu-header .wp-block-navigation-item.has-child {
     position: relative !important;
 }
@@ -844,24 +845,17 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     margin: 0 !important;
     background: #ffffff !important;
     border: 1px solid rgba(29,22,74,0.12) !important;
-    border-top: none !important;
-    border-radius: 0 0 8px 8px !important;
-    box-shadow: 0 8px 20px rgba(29,22,74,0.12) !important;
-    padding: 8px 0 !important;
-    min-width: 220px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 28px rgba(29,22,74,0.16) !important;
+    padding: 6px 0 !important;
+    min-width: 180px !important;
 }
-/* Dropdown items: left-aligned, full-width rows */
 .menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
     color: #1D164A !important;
     padding: 10px 20px !important;
     border-radius: 0 !important;
     display: block !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    text-decoration: none !important;
-}
-.menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
-    background: rgba(29,22,74,0.06) !important;
+    font-weight: 600 !important;
     text-decoration: none !important;
 }
 </style>
