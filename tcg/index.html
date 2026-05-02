@@ -798,7 +798,93 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
   white-space: nowrap !important;
   display: inline !important;
 }
-</style></head>
+</style><style id="pd-header">
+/* === GamesHub-style header === */
+
+/* Sticky dark nav */
+header.wp-block-template-part {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+}
+.menu-header .wp-block-columns {
+    background: #1D164A !important;
+    border-radius: 0 !important;
+    border-bottom: 3px solid #5C47DE !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Logo → white */
+.menu-header .wp-block-site-logo img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Nav text: white, normal weight, uniform */
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content,
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content strong,
+.menu-header .wp-block-navigation-item .wp-block-navigation-item__label {
+    color: rgba(255,255,255,0.88) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease !important;
+}
+.menu-header .wp-block-navigation-item a.wp-block-navigation-item__content:hover,
+.menu-header .wp-block-navigation .wp-block-navigation-item a:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Submenu chevron → white */
+.menu-header .wp-block-navigation__submenu-icon path {
+    stroke: rgba(255,255,255,0.7) !important;
+}
+
+/* Dropdown: dark, flat, clean */
+.menu-header .wp-block-navigation__submenu-container {
+    background: rgba(18,14,50,0.97) !important;
+    border: none !important;
+    border-radius: 0 0 6px 6px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+    padding: 6px 0 !important;
+    min-width: 180px !important;
+}
+.menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content {
+    color: rgba(255,255,255,0.82) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    padding: 10px 20px !important;
+    display: block !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+}
+.menu-header .wp-block-navigation__submenu-container .wp-block-navigation-item a.wp-block-navigation-item__content:hover {
+    color: #ffffff !important;
+    background: rgba(255,255,255,0.07) !important;
+    text-decoration: none !important;
+}
+
+/* Search icon → white */
+.menu-header .wp-block-search__button {
+    color: rgba(255,255,255,0.85) !important;
+    background: transparent !important;
+    border: none !important;
+}
+.menu-header .wp-block-search__button svg path {
+    fill: currentColor !important;
+}
+.menu-header .wp-block-search__button:hover {
+    color: #ffffff !important;
+}
+
+/* Mobile hamburger → white */
+.menu-header .wp-block-navigation__responsive-container-open svg path {
+    fill: #ffffff !important;
+}
+</style>
+</head>
 
 <body class="archive category category-tcg category-6 wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">
 
