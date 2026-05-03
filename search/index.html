@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +67,7 @@
     // Pre-load pagefind and trigger init via options() — same pattern as working overlay
     import('/pagefind/pagefind.js').then(function(m) {
       pf = m;
-      return pf.options({excerptLength: 30});
+      return pf.options({excerptLength: 30, language: "en-us"});
     }).then(function() {
       if (initialQ) {
         input.value = initialQ;
