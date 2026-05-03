@@ -110,7 +110,7 @@
           resultsEl.innerHTML = '<div id="no-results"><h2>No results found</h2><p>Try different keywords.</p></div>';
           return;
         }
-        var top = search.results.slice(0, 20);
+        var top = search.results.slice(0, 10);
         var done = 0;
         var cards = new Array(top.length);
         top.forEach(function(r, i) {
