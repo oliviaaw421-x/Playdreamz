@@ -158,10 +158,6 @@
 <!-- /Rank Math WordPress SEO plugin -->
 
 <title>PlayDreamz | The Hub for Gaming, Anime, TCG &amp; Collectibles</title>
-<link rel="alternate" type="application/rss+xml" title="playdreamz » Feed" href="/feed/">
-<link rel="alternate" type="application/rss+xml" title="playdreamz » Comments Feed" href="/comments/feed/">
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2F&amp;format=xml">
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -687,7 +683,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <script src="/wp-content/themes/fse-gamer/assets/js/wow.js?ver=1" id="wow-js-js" defer></script>
 <script src="/wp-content/themes/fse-gamer/assets/js/custom.js?ver=1" id="fse-gamer-custom-js-js" defer></script>
 <meta name="generator" content="WordPress 6.9.4">
-<link rel="shortlink" href="/">
+
 <script type="importmap" id="wp-importmap">
 {"imports":{"@wordpress/interactivity":"/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=66c613f68580994bb00a"}}
 </script>
@@ -1003,6 +999,18 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 #pd-sr a:hover{background:rgba(29,22,74,0.05);border-radius:6px}
 #pd-sr-empty{padding:12px 6px;color:#999;font-family:'Poppins',sans-serif;font-size:0.85rem}
 </style>
+<style id="pd-mobile">
+/* Mobile header: keep logo, menu button and search on one row */
+@media (max-width: 781px) {
+  .menu-header > .wp-block-columns { flex-wrap: nowrap !important; align-items: center !important; gap: 8px !important; }
+  .menu-header > .wp-block-columns > .wp-block-column { flex-basis: auto !important; flex-grow: 0 !important; margin: 0 !important; width: auto !important; }
+  .menu-header > .wp-block-columns > .wp-block-column:first-child { flex-grow: 1 !important; }
+  .menu-header .logo-box { justify-content: flex-start !important; }
+  /* Shorter page banners so the content starts above the fold */
+  .inner-header-box { min-height: 200px !important; height: auto !important; padding: 40px 16px !important; }
+  .inner-header-box h1, .inner-header-box h2 { font-size: 34px !important; line-height: 1.2 !important; }
+}
+</style>
 </head>
 
 <body class="home wp-singular page-template-default page page-id-105 wp-custom-logo wp-embed-responsive wp-theme-fse-gamer" data-pagefind-ignore="all">
@@ -1214,7 +1222,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-dafd8acc5d6ab3c04f117b2fdd553aa6" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px"><a href="#">Cards</a></h4>
+<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-dafd8acc5d6ab3c04f117b2fdd553aa6" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px"><a href="/tcg/">Cards</a></h4>
 </div>
 
 
@@ -1224,7 +1232,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-53c1a5833ac571cf8336eb0ab47cf077" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px"><a href="#">Collectibles</a></h4>
+<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-53c1a5833ac571cf8336eb0ab47cf077" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px">Collectibles</h4>
 </div>
 
 
@@ -1234,7 +1242,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-9769d6e0188346f89a9173774e65c29b" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px"><a href="#">Anime</a></h4>
+<h4 class="wp-block-heading has-text-align-center has-extra-secondary-color has-text-color has-link-color has-fse-gamer-teko-font-family wp-elements-9769d6e0188346f89a9173774e65c29b" style="font-size:27px;font-style:normal;font-weight:600;letter-spacing:1px">Anime</h4>
 </div>
 </div>
 
@@ -1316,7 +1324,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 <div class="wp-block-group post-main-area wow fadeInUp has-foreground-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="border-radius:10px;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><h2 style="font-size:25px;" class="has-link-color wp-elements-bc2ff9d4f39a3cc57dad2aa723d60b47 wp-block-post-title has-text-color has-extra-secondary-color has-fse-gamer-teko-font-family"><a href="/dave-the-diver-beginners-guide/" target="_self">Dave the Diver Beginner&#8217;s Guide: Story, Gameplay &amp; Tips (2026)</a></h2>
 
-<figure class="wp-block-post-featured-image"><a href="/dave-the-diver-beginners-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/png"><img src="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.png" height="675" width="1200" srcset="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Dave the Diver Beginner's Guide — Dave, Cobra and Bancho over the Blue Hole" style="object-fit:cover;" decoding="async" fetchpriority="high"> </picture></a></figure>
+<figure class="wp-block-post-featured-image"><a href="/dave-the-diver-beginners-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.webp 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.webp" height="675" width="1200" srcset="/wp-content/uploads/2026/10/dave-the-diver-beginners-guide-featured.webp 1200w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Dave the Diver Beginner's Guide — Dave, Cobra and Bancho over the Blue Hole" style="object-fit:cover;" decoding="async" fetchpriority="high"> </picture></a></figure>
 
 <div style="color:#747474; font-size:16px;" class="has-link-color wp-elements-d1769a78844fc5e05c3273ef4fd31d33 wp-block-post-excerpt has-text-color has-fse-gamer-poppins-font-family"><p class="wp-block-post-excerpt__excerpt">New to Dave the Diver? Learn how the day-and-night loop works, what to upgrade first, how to run Bancho Sushi, and 12 tips we wish we knew on day one…</p></div>
 
@@ -1326,7 +1334,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 <div class="wp-block-group post-main-area wow fadeInUp has-foreground-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="border-radius:10px;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><h2 style="font-size:25px;" class="has-link-color wp-elements-bc2ff9d4f39a3cc57dad2aa723d60b47 wp-block-post-title has-text-color has-extra-secondary-color has-fse-gamer-teko-font-family"><a href="/top-value-pikachu-cards/" target="_self">Top 10 Most Valuable Pikachu Cards in 2026</a></h2>
 
-<figure class="wp-block-post-featured-image"><a href="/top-value-pikachu-cards/" target="_self"><picture><source srcset="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/png"><img src="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.png" height="675" width="1200" srcset="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Top 10 Most Valuable Pikachu Cards in 2026" style="object-fit:cover;" decoding="async" fetchpriority="high"> </picture></a></figure>
+<figure class="wp-block-post-featured-image"><a href="/top-value-pikachu-cards/" target="_self"><picture><source srcset="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.webp 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.webp" height="675" width="1200" srcset="/wp-content/uploads/2026/06/top-value-pikachu-cards-featured.webp 1200w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Top 10 Most Valuable Pikachu Cards in 2026" style="object-fit:cover;" decoding="async" fetchpriority="high"> </picture></a></figure>
 
 <div style="color:#747474; font-size:16px;" class="has-link-color wp-elements-d1769a78844fc5e05c3273ef4fd31d33 wp-block-post-excerpt has-text-color has-fse-gamer-poppins-font-family"><p class="wp-block-post-excerpt__excerpt">From the $16.5M Pikachu Illustrator to rare Japanese tournament promos — discover which Pikachu cards command the highest prices in 2026, with verified PSA 10 auction data and… </p></div>
 
@@ -1356,7 +1364,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 <div class="wp-block-group post-main-area wow fadeInUp has-foreground-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="border-radius:10px;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><h2 style="font-size:25px;" class="has-link-color wp-elements-bc2ff9d4f39a3cc57dad2aa723d60b47 wp-block-post-title has-text-color has-extra-secondary-color has-fse-gamer-teko-font-family"><a href="/fake-pokemon-cards-guide/" target="_self">Real vs. Fake Pokémon Cards: The Ultimate Authentication Guide</a></h2>
 
-<figure class="wp-block-post-featured-image"><a href="/fake-pokemon-cards-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.webp 1200w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-300x169.webp 300w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-1024x576.webp 1024w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-768x432.webp 768w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.png" height="675" width="1200" srcset="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.png 1200w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-300x169.png 300w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-1024x576.png 1024w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-768x432.png 768w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Real vs. Fake Pokémon Cards: The Ultimate Authentication Guide" style="object-fit:cover;" decoding="async"> </picture></a></figure>
+<figure class="wp-block-post-featured-image"><a href="/fake-pokemon-cards-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.webp 1200w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-300x169.webp 300w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-1024x576.webp 1024w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-768x432.webp 768w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.webp" height="675" width="1200" srcset="/wp-content/uploads/2026/01/real-vs-fake-pokemon-cards.webp 1200w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-300x169.png 300w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-1024x576.webp 1024w, /wp-content/uploads/2026/01/real-vs-fake-pokemon-cards-768x432.webp 768w" sizes="(max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Real vs. Fake Pokémon Cards: The Ultimate Authentication Guide" style="object-fit:cover;" decoding="async"> </picture></a></figure>
 
 <div style="color:#747474; font-size:16px;" class="has-link-color wp-elements-d1769a78844fc5e05c3273ef4fd31d33 wp-block-post-excerpt has-text-color has-fse-gamer-poppins-font-family"><p class="wp-block-post-excerpt__excerpt">You’ve just pulled what looks like a stunning Full Art card from a pack. The artwork is incredible, the colors… </p></div>
 
@@ -1366,7 +1374,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 <div class="wp-block-group post-main-area wow fadeInUp has-foreground-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="border-radius:10px;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><h2 style="font-size:25px;" class="has-link-color wp-elements-bc2ff9d4f39a3cc57dad2aa723d60b47 wp-block-post-title has-text-color has-extra-secondary-color has-fse-gamer-teko-font-family"><a href="/pokemon-tcg-rarity-guide/" target="_self">Pokémon TCG Rarity Guide: Symbols, Charts &amp; How to Identify Value</a></h2>
 
-<figure class="wp-block-post-featured-image"><a href="/pokemon-tcg-rarity-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.webp 1200w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-300x169.webp 300w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-1024x576.webp 1024w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-768x432.webp 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.png" height="675" width="1200" srcset="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.png 1200w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-300x169.png 300w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-1024x576.png 1024w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-768x432.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Pokémon TCG Rarity Guide: Symbols, Charts &amp; How to Identify Value" style="object-fit:cover;" decoding="async" loading="lazy"> </picture></a></figure>
+<figure class="wp-block-post-featured-image"><a href="/pokemon-tcg-rarity-guide/" target="_self"><picture><source srcset="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.webp 1200w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-300x169.webp 300w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-1024x576.webp 1024w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-768x432.webp 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" type="image/webp"><img src="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.webp" height="675" width="1200" srcset="/wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value.webp 1200w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-300x169.png 300w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-1024x576.webp 1024w, /wp-content/uploads/2026/01/pokemon-tcg-rarity-guide-symbols-charts-value-768x432.webp 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" class="attachment-post-thumbnail size-post-thumbnail wp-post-image sp-no-webp" alt="Pokémon TCG Rarity Guide: Symbols, Charts &amp; How to Identify Value" style="object-fit:cover;" decoding="async" loading="lazy"> </picture></a></figure>
 
 <div style="color:#747474; font-size:16px;" class="has-link-color wp-elements-d1769a78844fc5e05c3273ef4fd31d33 wp-block-post-excerpt has-text-color has-fse-gamer-poppins-font-family"><p class="wp-block-post-excerpt__excerpt">You’ve just cracked open a fresh booster pack. The smell of fresh ink hits you, and you reveal the final… </p></div>
 

@@ -1,0 +1,12 @@
+# Cloudflare Pages headers
+/wp-content/uploads/*
+  Cache-Control: public, max-age=2592000
+
+/wp-content/themes/*
+  Cache-Control: public, max-age=604800
+
+/wp-includes/*
+  Cache-Control: public, max-age=604800
+
+/wp-content/plugins/*
+  Cache-Control: public, max-age=604800
