@@ -1510,7 +1510,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = '/wp-admin/admin-ajax.php', heateorSssCloseIconPath = '/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = '/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
 //# sourceURL=heateor_sss_sharing_js-js-before
 </script>
-<script src="/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.3.79" id="heateor_sss_sharing_js-js"></script>
+<script src="/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.3.79" id="heateor_sss_sharing_js-js" defer></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
 </script>
@@ -1531,7 +1531,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     overlay.classList.add("open");
     document.body.style.overflow="hidden";
     si.focus();
-    if(!pf)import('/pagefind/pagefind.js').then(function(m){pf=m;pf.options({excerptLength:0});});
+    if(!pf)import('/pagefind/pagefind.js').then(function(m){pf=m;pf.options({excerptLength:0});if(si.value.trim())doSearch(si.value);});
   }
   function doSearch(q){
     if(!pf||!q.trim()){sr.innerHTML='';return;}
