@@ -646,7 +646,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 (function(){
     function init(){
         if(window.innerWidth < 600) return;
-        var li = document.querySelector('.menu-header .wp-block-navigation-item.has-child');
+        document.querySelectorAll('.menu-header .wp-block-navigation-item.has-child').forEach(setup);
+    }
+    function setup(li){
         var link = li && li.querySelector(':scope > a.wp-block-navigation-item__content');
         var sub = li && li.querySelector(':scope > .wp-block-navigation__submenu-container');
         if(!li || !link || !sub) return;
