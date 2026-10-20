@@ -773,6 +773,49 @@ ul.sidebar-list li:first-child .wp-block-latest-posts__featured-image img { widt
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-title { display: block; font-size: 16px !important; line-height: 1.35 !important; }
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: block; margin-top: 6px !important; }
 </style>
+<style id="pd-tables">
+/* Article tables: rounded card, navy header, zebra rows */
+.wp-block-post-content figure.wp-block-table { margin: 2rem 0 !important; border: 1px solid #e6e6ef; border-radius: 14px; overflow-x: auto; box-shadow: 0 6px 22px rgba(29, 22, 74, .06); background: #fff; -webkit-overflow-scrolling: touch; }
+.wp-block-post-content figure.wp-block-table table { border-collapse: separate !important; border-spacing: 0; width: 100%; table-layout: auto !important; margin: 0; font-size: 15px; line-height: 1.5; }
+.wp-block-post-content figure.wp-block-table thead { border: 0 !important; }
+.wp-block-post-content figure.wp-block-table td, .wp-block-post-content figure.wp-block-table th { border: 0 !important; padding: 13px 16px !important; vertical-align: middle; text-align: left; }
+.wp-block-post-content figure.wp-block-table thead td, .wp-block-post-content figure.wp-block-table thead th { background: #1D164A; color: #fff !important; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; white-space: nowrap; }
+.wp-block-post-content figure.wp-block-table thead strong { color: #fff !important; font-weight: 600; }
+.wp-block-post-content figure.wp-block-table tbody td { border-top: 1px solid #eeeef4 !important; color: #3d3d4e; }
+.wp-block-post-content figure.wp-block-table tbody tr:first-child td { border-top: 0 !important; }
+.wp-block-post-content figure.wp-block-table tbody tr:nth-child(even) td { background: #f8f8fc; }
+.wp-block-post-content figure.wp-block-table tbody tr:hover td { background: #eef4ff; }
+.wp-block-post-content figure.wp-block-table tbody td:first-child { font-weight: 600; color: #1D164A; }
+.wp-block-post-content figure.wp-block-table tbody td:first-child strong { font-weight: 600; }
+/* Rarity chart: emphasise the rarity name, not the symbol cell */
+.wp-block-post-content figure.pd-rarity-table tbody td:first-child { font-weight: 400; width: 150px; }
+.wp-block-post-content figure.pd-rarity-table tbody td:nth-child(2) { font-weight: 600; color: #1D164A; }
+/* Ranked comparison tables: card name is the key column */
+.wp-block-post-content figure.pd-rank-table tbody td:first-child { white-space: nowrap; }
+.wp-block-post-content figure.pd-rank-table tbody td:nth-child(2) { font-weight: 600; color: #1D164A; min-width: 150px; }
+.wp-block-post-content figure.pd-rank-table thead td, .wp-block-post-content figure.pd-rank-table thead th { white-space: normal; }
+.wp-block-post-content figure.pd-rank-table tbody td:nth-child(3) { white-space: nowrap; }
+.wp-block-post-content figure.wp-block-table td { overflow-wrap: normal; word-break: normal; hyphens: manual; }
+/* Two-column fact tables without a header: shaded label column */
+.wp-block-post-content figure.wp-block-table table:not(:has(thead)) td:first-child { width: 36%; background: #f4f4fa; }
+.wp-block-post-content figure.wp-block-table table:not(:has(thead)) tr:nth-child(even) td:not(:first-child) { background: #fff; }
+/* Wide tables scroll sideways on phones instead of squashing */
+@media (max-width: 781px) {
+  .wp-block-post-content figure.wp-block-table table:has(tr > :nth-child(3)) { min-width: 560px; }
+  .wp-block-post-content figure.wp-block-table td, .wp-block-post-content figure.wp-block-table th { padding: 11px 12px !important; font-size: 14px; }
+}
+/* Rarity symbols */
+.pd-sym { display: inline-flex; align-items: center; gap: 2px; font-size: 23px; line-height: 1; letter-spacing: 1px; white-space: nowrap; }
+.pd-sym-black { color: #15151c; }
+.pd-sym-silver { background: linear-gradient(180deg, #f2f4f7 0%, #9aa3ae 55%, #d9dee4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: .6px #7c8591; }
+.pd-sym-gold { background: linear-gradient(180deg, #ffe680 0%, #e0a800 60%, #b88300 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: .4px #a87800; }
+.pd-sym-hollow { color: #d39b00; }
+.pd-sym-note { display: block; margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: #8a8aa0; }
+.pd-sym-promo { font-size: 9px; font-weight: 700; letter-spacing: .8px; color: #fff; background: #15151c; border-radius: 4px; padding: 3px 5px; margin-left: 4px; }
+.pd-sym-pill { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; color: #fff; border-radius: 999px; padding: 5px 10px; white-space: nowrap; }
+.pd-sym-ace { background: linear-gradient(90deg, #c2187a, #e0409c); }
+.pd-sym-mega { background: linear-gradient(90deg, #b88300, #e8b923); }
+</style>
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-430 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">

@@ -773,6 +773,49 @@ ul.sidebar-list li:first-child .wp-block-latest-posts__featured-image img { widt
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-title { display: block; font-size: 16px !important; line-height: 1.35 !important; }
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: block; margin-top: 6px !important; }
 </style>
+<style id="pd-tables">
+/* Article tables: rounded card, navy header, zebra rows */
+.wp-block-post-content figure.wp-block-table { margin: 2rem 0 !important; border: 1px solid #e6e6ef; border-radius: 14px; overflow-x: auto; box-shadow: 0 6px 22px rgba(29, 22, 74, .06); background: #fff; -webkit-overflow-scrolling: touch; }
+.wp-block-post-content figure.wp-block-table table { border-collapse: separate !important; border-spacing: 0; width: 100%; table-layout: auto !important; margin: 0; font-size: 15px; line-height: 1.5; }
+.wp-block-post-content figure.wp-block-table thead { border: 0 !important; }
+.wp-block-post-content figure.wp-block-table td, .wp-block-post-content figure.wp-block-table th { border: 0 !important; padding: 13px 16px !important; vertical-align: middle; text-align: left; }
+.wp-block-post-content figure.wp-block-table thead td, .wp-block-post-content figure.wp-block-table thead th { background: #1D164A; color: #fff !important; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; white-space: nowrap; }
+.wp-block-post-content figure.wp-block-table thead strong { color: #fff !important; font-weight: 600; }
+.wp-block-post-content figure.wp-block-table tbody td { border-top: 1px solid #eeeef4 !important; color: #3d3d4e; }
+.wp-block-post-content figure.wp-block-table tbody tr:first-child td { border-top: 0 !important; }
+.wp-block-post-content figure.wp-block-table tbody tr:nth-child(even) td { background: #f8f8fc; }
+.wp-block-post-content figure.wp-block-table tbody tr:hover td { background: #eef4ff; }
+.wp-block-post-content figure.wp-block-table tbody td:first-child { font-weight: 600; color: #1D164A; }
+.wp-block-post-content figure.wp-block-table tbody td:first-child strong { font-weight: 600; }
+/* Rarity chart: emphasise the rarity name, not the symbol cell */
+.wp-block-post-content figure.pd-rarity-table tbody td:first-child { font-weight: 400; width: 150px; }
+.wp-block-post-content figure.pd-rarity-table tbody td:nth-child(2) { font-weight: 600; color: #1D164A; }
+/* Ranked comparison tables: card name is the key column */
+.wp-block-post-content figure.pd-rank-table tbody td:first-child { white-space: nowrap; }
+.wp-block-post-content figure.pd-rank-table tbody td:nth-child(2) { font-weight: 600; color: #1D164A; min-width: 150px; }
+.wp-block-post-content figure.pd-rank-table thead td, .wp-block-post-content figure.pd-rank-table thead th { white-space: normal; }
+.wp-block-post-content figure.pd-rank-table tbody td:nth-child(3) { white-space: nowrap; }
+.wp-block-post-content figure.wp-block-table td { overflow-wrap: normal; word-break: normal; hyphens: manual; }
+/* Two-column fact tables without a header: shaded label column */
+.wp-block-post-content figure.wp-block-table table:not(:has(thead)) td:first-child { width: 36%; background: #f4f4fa; }
+.wp-block-post-content figure.wp-block-table table:not(:has(thead)) tr:nth-child(even) td:not(:first-child) { background: #fff; }
+/* Wide tables scroll sideways on phones instead of squashing */
+@media (max-width: 781px) {
+  .wp-block-post-content figure.wp-block-table table:has(tr > :nth-child(3)) { min-width: 560px; }
+  .wp-block-post-content figure.wp-block-table td, .wp-block-post-content figure.wp-block-table th { padding: 11px 12px !important; font-size: 14px; }
+}
+/* Rarity symbols */
+.pd-sym { display: inline-flex; align-items: center; gap: 2px; font-size: 23px; line-height: 1; letter-spacing: 1px; white-space: nowrap; }
+.pd-sym-black { color: #15151c; }
+.pd-sym-silver { background: linear-gradient(180deg, #f2f4f7 0%, #9aa3ae 55%, #d9dee4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: .6px #7c8591; }
+.pd-sym-gold { background: linear-gradient(180deg, #ffe680 0%, #e0a800 60%, #b88300 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: .4px #a87800; }
+.pd-sym-hollow { color: #d39b00; }
+.pd-sym-note { display: block; margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: #8a8aa0; }
+.pd-sym-promo { font-size: 9px; font-weight: 700; letter-spacing: .8px; color: #fff; background: #15151c; border-radius: 4px; padding: 3px 5px; margin-left: 4px; }
+.pd-sym-pill { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; color: #fff; border-radius: 999px; padding: 5px 10px; white-space: nowrap; }
+.pd-sym-ace { background: linear-gradient(90deg, #c2187a, #e0409c); }
+.pd-sym-mega { background: linear-gradient(90deg, #b88300, #e8b923); }
+</style>
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-332 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">
@@ -1052,7 +1095,7 @@ ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: bloc
 
 <h2 class="wp-block-heading" id="value-comparison">Quick Value Comparison: Top 10 Most Valuable Pikachu Cards (2026)</h2>
 
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><td><strong>Rank</strong></td><td><strong>Card</strong></td><td><strong>Year</strong></td><td><strong>Record Sale / Value (Oct 2026)</strong></td><td><strong>Key Factor</strong></td></tr></thead><tbody><tr><td><strong>#1</strong></td><td>Pikachu Illustrator</td><td>1998</td><td>$16,492,000 (PSA 10)</td><td>39 copies awarded; only 1 PSA 10</td></tr><tr><td><strong>#2</strong></td><td>Trophy Pikachu No. 3 Trainer</td><td>1998</td><td>$1,769,000 (PSA 10)</td><td>Only PSA 10 of 5 graded; 1998 Kamex Mega Battle prize</td></tr><tr><td><strong>#3</strong></td><td>Trophy Pikachu No. 2 Trainer</td><td>1997&#8211;1998</td><td>$444,000 (PSA 10, Goldin 2023)</td><td>Lizardon Mega Battle prize; ~14 copies estimated</td></tr><tr><td><strong>#4</strong></td><td>Snap Pikachu (CoroCoro Contest)</td><td>1999</td><td>~$270,000 (reported, 2023)</td><td>Photo contest prize; only 20 copies</td></tr><tr><td><strong>#5</strong></td><td>Gold Star Pikachu EX Holon Phantoms</td><td>2006</td><td>~$90,000&#8211;$115,000 (PSA 10, est.)</td><td>Pack-pullable Gold Star; EX era</td></tr><tr><td><strong>#6</strong></td><td>20th Anniversary Festa Promo XY-P 279</td><td>2016</td><td>From ~$19,000 (PSA 10, asking)</td><td>Participation promo; 2 Japanese events only</td></tr><tr><td><strong>#7</strong></td><td>Poncho Pikachu Mega Charizard X XY-P 207</td><td>2016</td><td>~$18,000&#8211;$28,000 (PSA 10)</td><td>Japan Special Box exclusive; Charizard crossover</td></tr><tr><td><strong>#8</strong></td><td>Pikachu Munch Scream SM-P 288</td><td>2018</td><td>~$15,000&#8211;$16,000 (PSA 10)</td><td>Museum-exclusive; one week, 1 per visitor</td></tr><tr><td><strong>#9</strong></td><td>Base Set Pikachu Red Cheeks 58/102</td><td>1999</td><td>~$5,000 (PSA 10, 1st Edition)</td><td>Early print variant; 27-year-old cardstock</td></tr><tr><td><strong>#10</strong></td><td>Mario Pikachu Full Art XY-P 294</td><td>2016</td><td>~$20,000&#8211;$34,000 (PSA 10)</td><td>Japan-only Nintendo crossover; Full Art</td></tr></tbody></table></figure>
+<figure class="wp-block-table pd-rank-table"><table class="has-fixed-layout"><thead><tr><td><strong>Rank</strong></td><td><strong>Card</strong></td><td><strong>Year</strong></td><td><strong>Record Sale / Value (Oct 2026)</strong></td><td><strong>Key Factor</strong></td></tr></thead><tbody><tr><td><strong>#1</strong></td><td>Pikachu Illustrator</td><td>1998</td><td>$16,492,000 (PSA 10)</td><td>39 copies awarded; only 1 PSA 10</td></tr><tr><td><strong>#2</strong></td><td>Trophy Pikachu No. 3 Trainer</td><td>1998</td><td>$1,769,000 (PSA 10)</td><td>Only PSA 10 of 5 graded; 1998 Kamex Mega Battle prize</td></tr><tr><td><strong>#3</strong></td><td>Trophy Pikachu No. 2 Trainer</td><td>1997&#8211;1998</td><td>$444,000 (PSA 10, Goldin 2023)</td><td>Lizardon Mega Battle prize; ~14 copies estimated</td></tr><tr><td><strong>#4</strong></td><td>Snap Pikachu (CoroCoro Contest)</td><td>1999</td><td>~$270,000 (reported, 2023)</td><td>Photo contest prize; only 20 copies</td></tr><tr><td><strong>#5</strong></td><td>Gold Star Pikachu EX Holon Phantoms</td><td>2006</td><td>~$90,000&#8211;$115,000 (PSA 10, est.)</td><td>Pack-pullable Gold Star; EX era</td></tr><tr><td><strong>#6</strong></td><td>20th Anniversary Festa Promo XY-P 279</td><td>2016</td><td>From ~$19,000 (PSA 10, asking)</td><td>Participation promo; 2 Japanese events only</td></tr><tr><td><strong>#7</strong></td><td>Poncho Pikachu Mega Charizard X XY-P 207</td><td>2016</td><td>~$18,000&#8211;$28,000 (PSA 10)</td><td>Japan Special Box exclusive; Charizard crossover</td></tr><tr><td><strong>#8</strong></td><td>Pikachu Munch Scream SM-P 288</td><td>2018</td><td>~$15,000&#8211;$16,000 (PSA 10)</td><td>Museum-exclusive; one week, 1 per visitor</td></tr><tr><td><strong>#9</strong></td><td>Base Set Pikachu Red Cheeks 58/102</td><td>1999</td><td>~$5,000 (PSA 10, 1st Edition)</td><td>Early print variant; 27-year-old cardstock</td></tr><tr><td><strong>#10</strong></td><td>Mario Pikachu Full Art XY-P 294</td><td>2016</td><td>~$20,000&#8211;$34,000 (PSA 10)</td><td>Japan-only Nintendo crossover; Full Art</td></tr></tbody></table></figure>
 
 <p><strong>Want to know if your card could be worth grading?</strong> Read our guide on <a href="/is-grading-pokemon-cards-worth-it/"><strong>whether grading Pok&#233;mon cards is worth it in 2026</strong></a> before you submit anything to PSA or BGS.</p>
 
