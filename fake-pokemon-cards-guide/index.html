@@ -816,6 +816,11 @@ ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: bloc
 .pd-sym-ace { background: linear-gradient(90deg, #c2187a, #e0409c); }
 .pd-sym-mega { background: linear-gradient(90deg, #b88300, #e8b923); }
 </style>
+<style id="pd-links">
+/* Internal links in page content are bold */
+.wp-block-post-content a[href^="/"]:not([class*="heateor"]):not(:has(img, picture, svg)),
+.wp-block-post-content a[href^="https://playdreamz.com"]:not([class*="heateor"]):not(:has(img, picture, svg)) { font-weight: 700 !important; }
+</style>
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-332 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">

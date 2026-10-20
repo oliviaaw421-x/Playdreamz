@@ -761,6 +761,11 @@ ul.sidebar-list li:first-child .wp-block-latest-posts__featured-image img { widt
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-title { display: block; font-size: 16px !important; line-height: 1.35 !important; }
 ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: block; margin-top: 6px !important; }
 </style>
+<style id="pd-links">
+/* Internal links in page content are bold */
+.wp-block-post-content a[href^="/"]:not([class*="heateor"]):not(:has(img, picture, svg)),
+.wp-block-post-content a[href^="https://playdreamz.com"]:not([class*="heateor"]):not(:has(img, picture, svg)) { font-weight: 700 !important; }
+</style>
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-405 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">
