@@ -738,6 +738,29 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
   .inner-header-box h1, .inner-header-box h2 { font-size: 34px !important; line-height: 1.2 !important; }
 }
 </style>
+<style id="pd-sidebar">
+/* Sidebar: compact post list (thumbnail left, title + date right, whole row clickable) */
+.sidebar-area-wrap > .wp-block-group { border: 1px solid #ececf3 !important; border-radius: 16px !important; box-shadow: 0 8px 28px rgba(29, 22, 74, .07) !important; }
+ul.sidebar-list { margin: 0 !important; padding: 0 !important; }
+ul.sidebar-list li { position: relative; display: grid !important; grid-template-columns: 92px 1fr; grid-template-rows: auto 1fr; column-gap: 12px; align-items: start; padding: 14px 0 !important; margin: 0 !important; border-bottom: 1px solid #eeeef4; }
+ul.sidebar-list li:first-child { padding-top: 0 !important; }
+ul.sidebar-list li:last-child { border-bottom: 0; padding-bottom: 0 !important; }
+ul.sidebar-list .wp-block-latest-posts__featured-image { grid-row: 1 / span 2; align-self: start; margin: 2px 0 0 !important; width: 92px; }
+ul.sidebar-list .wp-block-latest-posts__featured-image img { display: block; width: 92px !important; height: 52px !important; object-fit: cover; border-radius: 8px; transition: opacity .2s ease; }
+ul.sidebar-list .wp-block-latest-posts__post-title { align-self: start; font-family: 'Poppins', sans-serif !important; font-size: 14px !important; line-height: 1.35 !important; font-weight: 600 !important; color: #1D164A !important; text-decoration: none !important; }
+ul.sidebar-list .wp-block-latest-posts__post-title::after { content: ""; position: absolute; inset: 0; }
+ul.sidebar-list li:hover .wp-block-latest-posts__post-title { color: #0070e0 !important; }
+ul.sidebar-list li:hover img { opacity: .85; }
+ul.sidebar-list .wp-block-latest-posts__post-author { display: none !important; }
+ul.sidebar-list .wp-block-latest-posts__post-date { align-self: start; font-family: 'Poppins', sans-serif !important; font-size: 12px !important; font-weight: 500 !important; color: #8a8aa0 !important; margin-top: 4px !important; }
+@media (max-width: 781px) { .sidebar-area-wrap > .wp-block-group { padding: 22px 18px !important; } .sidebar-area-wrap { padding-left: 0 !important; padding-right: 0 !important; } }
+/* First post: featured card (full-width image, title below) */
+ul.sidebar-list li:first-child { display: block !important; padding-bottom: 16px !important; }
+ul.sidebar-list li:first-child .wp-block-latest-posts__featured-image { width: 100% !important; margin: 0 0 12px !important; }
+ul.sidebar-list li:first-child .wp-block-latest-posts__featured-image img { width: 100% !important; height: auto !important; aspect-ratio: 16 / 9; border-radius: 10px; }
+ul.sidebar-list li:first-child .wp-block-latest-posts__post-title { display: block; font-size: 16px !important; line-height: 1.35 !important; }
+ul.sidebar-list li:first-child .wp-block-latest-posts__post-date { display: block; margin-top: 6px !important; }
+</style>
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-405 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-fse-gamer">
