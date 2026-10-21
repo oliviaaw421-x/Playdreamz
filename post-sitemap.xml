@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/palworld-tower-bosses-guide/</loc>
+		<lastmod>2026-10-21T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-tower-bosses-guide-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-tower-bosses-1-0.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-combat-1-0.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-zoe-grizzbolt.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-lily-lyleen.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-desert-battle.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-cherry-blossom-base.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-feybreak-crystals.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-sunreach-sky-islands.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-world-tree.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-feybreak-pals.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/palworld-beginners-guide/</loc>
 		<lastmod>2026-10-21T00:00:00+00:00</lastmod>
 		<image:image>
