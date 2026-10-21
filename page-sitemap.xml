@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://playdreamz.com/</loc>
-		<lastmod>2026-01-22T14:43:44+00:00</lastmod>
+		<lastmod>2026-10-21T00:00:00+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://playdreamz.com/terms-and-conditions/</loc>
@@ -28,13 +28,20 @@
 	</url>
 	<url>
 		<loc>https://playdreamz.com/games/</loc>
-		<lastmod>2026-10-19T00:00:00+00:00</lastmod>
+		<lastmod>2026-10-21T00:00:00+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://playdreamz.com/games/dave-the-diver/</loc>
 		<lastmod>2026-10-19T00:00:00+00:00</lastmod>
 		<image:image>
 			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/dave-the-diver-cover.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://playdreamz.com/games/palworld/</loc>
+		<lastmod>2026-10-21T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-cover.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
