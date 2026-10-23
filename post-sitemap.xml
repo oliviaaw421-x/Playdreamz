@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/how-to-store-pokemon-cards/</loc>
+		<lastmod>2026-10-24T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/how-to-store-pokemon-cards-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/pokemon-card-storage-layers.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/pokemon-card-binder-pages.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/pokemon-card-storage-conditions.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/pokemon-card-storage-at-home.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/pokemon-graded-and-sealed-storage.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/palworld-best-pals-for-work/</loc>
 		<lastmod>2026-10-23T00:00:00+00:00</lastmod>
 		<image:image>
@@ -281,7 +303,7 @@
 	</url>
 	<url>
 		<loc>https://playdreamz.com/pokemon-card-investing-guide/</loc>
-		<lastmod>2026-10-23T00:00:00+00:00</lastmod>
+		<lastmod>2026-10-24T00:00:00+00:00</lastmod>
 		<image:image>
 			<image:loc>https://playdreamz.com/wp-content/uploads/2026/02/fake-pokemon-card-rip-test-white-paper.webp</image:loc>
 		</image:image>
@@ -307,7 +329,7 @@
 	</url>
 	<url>
 		<loc>https://playdreamz.com/pokemon-tcg-rarity-guide/</loc>
-		<lastmod>2026-10-23T00:00:00+00:00</lastmod>
+		<lastmod>2026-10-24T00:00:00+00:00</lastmod>
 		<image:image>
 			<image:loc>https://playdreamz.com/wp-content/uploads/2026/01/pokemon-tcg-modern-rarity-chart.png</image:loc>
 		</image:image>
