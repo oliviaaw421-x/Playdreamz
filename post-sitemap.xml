@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/palworld-best-passive-skills/</loc>
+		<lastmod>2026-10-24T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-best-passive-skills-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-passive-ranks.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-best-combat-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-best-work-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-mount-speed-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-best-utility-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-pal-exclusive-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-passives-to-avoid.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-how-to-get-passives.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/palworld-passive-builds.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/palworld-breeding-guide/</loc>
 		<lastmod>2026-10-24T00:00:00+00:00</lastmod>
 		<image:image>
