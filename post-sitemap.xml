@@ -72,7 +72,10 @@
 		<image:image>
 			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/one-piece-op-17-big-hits.jpg</image:loc>
 		</image:image>
-	</url>
+			<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/one-piece-eb-05-revealed-sp-cards.jpg</image:loc>
+		</image:image>
+</url>
 	<url>
 		<loc>https://playdreamz.com/one-piece-tcg-sets-in-order/</loc>
 		<lastmod>2026-10-25T00:00:00+00:00</lastmod>
