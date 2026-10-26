@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/cyberpunk-tcg-rarity-guide/</loc>
+		<lastmod>2026-10-27T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-rarity-guide-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-rarity-symbols.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-card-anatomy.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-rarity-symbol-on-cards.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-cards-by-rarity.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-pull-rates.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-prices-by-rarity.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-same-card-different-rarity.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-beta-vs-retail-iconic.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/10/cyberpunk-tcg-nova-rare-box-toppers.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/best-one-piece-cards-by-set/</loc>
 		<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 		<image:image>
