@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/gta-6-gta-plus/</loc>
+		<lastmod>2026-11-20T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-6-gta-plus-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-benefits-overview.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-elegy-garage.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-elegy.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-sell-value.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-transit.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-store-discounts.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-keep-or-lose.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-6-vice-city-parking.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-plus-free-month.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-6-vice-city-marina.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-6-convertible.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/gta-6-trophy-list/</loc>
 		<lastmod>2026-11-20T00:00:00+00:00</lastmod>
 		<image:image>
@@ -30,7 +70,7 @@
 	</url>
 	<url>
 		<loc>https://playdreamz.com/gta-6-standard-vs-ultimate-edition/</loc>
-		<lastmod>2026-11-18T00:00:00+00:00</lastmod>
+		<lastmod>2026-11-20T00:00:00+00:00</lastmod>
 		<image:image>
 			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/gta-6-standard-vs-ultimate-edition-featured.png</image:loc>
 		</image:image>
