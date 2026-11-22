@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://playdreamz.com/cyberpunk-tcg-colors/</loc>
+		<lastmod>2026-11-22T00:00:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-colors-featured.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-colors-at-a-glance.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-ram-color-symbols.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-legends-per-color.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-colors-in-official-decks.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://playdreamz.com/wp-content/uploads/2026/11/cyberpunk-tcg-starter-decks.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://playdreamz.com/cyberpunk-tcg-units/</loc>
 		<lastmod>2026-11-21T00:00:00+00:00</lastmod>
 		<image:image>
